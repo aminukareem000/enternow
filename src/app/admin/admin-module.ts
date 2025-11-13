@@ -29,7 +29,8 @@ import { AdminSideNav } from './layout/admin-side-nav/admin-side-nav';
     AdminRoutingModule,
     MaterialModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    
   ]
 })
 export class AdminModule { }
