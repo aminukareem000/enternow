@@ -1,0 +1,23 @@
+<div class="login-container">
+  <h2 class="title">Staff Login</h2>
+
+  <form [formGroup]="logInForm" (ngSubmit)="submitForm()">
+    <div class="input-group">
+      <h4 class="field-title">Staff ID</h4>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter your Staff ID</mat-label>
+        <input matInput type="text" formControlName="staffid" required />
+      </mat-form-field>
+    </div>
+
+    <div class="input-group">
+      <h4 class="field-title">Password</h4>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter your Password</mat-label>
+        <input matInput type="password" formControlName="password" required />
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button color="primary" type="submit">Log In</button>
+  </form>
+</div>

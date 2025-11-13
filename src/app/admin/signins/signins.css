@@ -1,0 +1,39 @@
+h2, h3 {
+  color: #1565c0;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mat-header-cell {
+  background-color: #1565c0;
+  color: #fff;
+  font-weight: 600;
+}
+
+.mat-cell {
+  padding: 12px;
+}
+
+tr.mat-row:hover {
+  background-color: #f0f7ff;
+}
+
+.sign-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.sign-form button {
+  grid-column: span 2;
+  width: 120px;
+}
+
+

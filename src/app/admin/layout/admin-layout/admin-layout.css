@@ -1,0 +1,86 @@
+/* === MAIN LAYOUT CONTAINER === */
+.admin-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f6f9;
+}
+
+/* === HEADER SECTION === */
+.app-header {
+  flex-shrink: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background-color: #1565c0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+/* === BODY WRAPPER === */
+.admin-body {
+  display: flex;
+  flex: 1;
+  margin-top: 64px; /* push below fixed header */
+  height: calc(100vh - 64px);
+  overflow: hidden;
+}
+
+/* === SIDEBAR SECTION === */
+app-admin-side-nav {
+  width: 250px;
+  /* background-color: #01081b; */
+  color: white;
+  padding: 5px 0;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease;
+  flex-shrink: 0;
+}
+
+/* === MAIN CONTENT SECTION === */
+.content {
+  flex: 1;
+  background-color: #f4f6f9;
+  padding: 30px 40px;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+/* === SCROLLBAR STYLING === */
+.content::-webkit-scrollbar {
+  width: 8px;
+}
+.content::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 992px) {
+  app-admin-side-nav {
+    width: 200px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-body {
+    flex-direction: column;
+  }
+
+  app-admin-side-nav {
+    width: 100%;
+    height: auto;
+  }
+}

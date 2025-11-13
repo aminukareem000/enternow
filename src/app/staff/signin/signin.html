@@ -1,0 +1,45 @@
+<!-- Example list -->
+<!-- <p *ngFor="let car of cars"> {{ car }} </p> -->
+
+<!-- Switch: show the portal title based on userCase -->
+<div [ngSwitch]="userCase" class="switch-container">
+  <h2 *ngSwitchCase="'staff'">Staff Sign-In Portal</h2>
+  <h2 *ngSwitchCase="'admin'">Admin Sign-In Portal</h2>
+  <h2 *ngSwitchDefault>General Sign-In Portal</h2>
+</div>
+
+<!-- Sign-In Form -->
+<form [formGroup]="signInForm" class="signpage" (ngSubmit)="submitForm()">
+
+  <div class="card">
+    <h1 class="card-title">Enter Now</h1>
+
+    <!-- Field group: Staff ID -->
+    <div class="field-group">
+      <h4 class="field-name">Staff ID</h4>
+      <mat-form-field appearance="outline" class="full">
+        <mat-label>Staff ID</mat-label>
+        <input matInput type="text" formControlName="staffId" />
+      </mat-form-field>
+    </div>
+
+    <!-- Field group: Password -->
+    <div class="field-group">
+      <h4 class="field-name">Password</h4>
+      <mat-form-field appearance="outline" class="full">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password" />
+      </mat-form-field>
+    </div>
+
+    <!-- Example extra info container (optional) -->
+    <div class="info-group">
+      <h4 class="field-name">Notes</h4>
+      <p class="info-text">Use your staff credentials to sign in. Contact admin if you cannot login.</p>
+    </div>
+
+    <button mat-raised-button color="primary" type="submit" class="submit-btn">
+      Sign In
+    </button>
+  </div>
+</form>

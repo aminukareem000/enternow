@@ -1,0 +1,27 @@
+/*  APP HEADER  */
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background-color: #1565c0; /* deep corporate blue */
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+/* Adjust page body so content isn’t hidden under fixed header */
+body {
+  margin: 0;
+  padding-top: 64px; /* same height as header */
+  background-color: #f4f6f9;
+  font-family: "Poppins", sans-serif;
+}

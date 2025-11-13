@@ -1,0 +1,97 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1565c0, #42a5f5);
+  padding: 40px 20px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* Switch header/title area */
+.switch-container {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.switch-container h2 {
+  display: inline-block;
+  padding: 8px 18px;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.12);
+}
+
+/* Card that holds the form */
+.card {
+  max-width: 420px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  text-align: left;
+}
+
+/* Card title */
+.card-title {
+  margin: 0 0 18px 0;
+  color: #1565c0;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Each field group (container) */
+.field-group {
+  margin-bottom: 14px;
+}
+
+/* The "name" displayed on top of each container */
+.field-name {
+  margin: 0 0 6px 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 0.2px;
+}
+
+/* Optional info group styling */
+.info-group {
+  margin-bottom: 14px;
+  background: #f7f9ff;
+  padding: 10px 12px;
+  border-radius: 6px;
+}
+
+.info-text {
+  margin: 0;
+  font-size: 13px;
+  color: #444;
+}
+
+/* Make mat-form-field full width within card */
+mat-form-field.full {
+  width: 100%;
+}
+
+/* Button */
+.submit-btn {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px 0;
+  font-weight: 700;
+}
+
+/* Small screen adjustments */
+@media (max-width: 480px) {
+  .card {
+    padding: 20px;
+    width: calc(100% - 32px);
+  }
+
+  .switch-container h2 {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+}
