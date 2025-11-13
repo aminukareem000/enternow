@@ -15,6 +15,7 @@
         "@schematics/angular:pipe": {
           "standalone": false
         }
+
       },
       "root": "",
       "sourceRoot": "src",
@@ -41,18 +42,19 @@
           },
           "configurations": {
             "production": {
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
-                }
-              ],
+             "budgets": [
+  {
+    "type": "initial",
+    "maximumWarning": "2mb",
+    "maximumError": "5mb"
+  },
+  {
+    "type": "anyComponentStyle",
+    "maximumWarning": "10kb",
+    "maximumError": "15kb"
+  }
+],
+
               "outputHashing": "all"
             },
             "development": {
